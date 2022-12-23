@@ -80,5 +80,10 @@ class UserEvent {
       return error;
     }
   }
+  getAllEvent(parent ,args ,context){
+    const allEvent= userEvent.find()
+    console.log(allEvent)
+  }
+
 }
 export default new UserEvent();

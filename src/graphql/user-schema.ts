@@ -58,6 +58,9 @@ const typeDefs = `#graphql
       email:String
       password:String
     }
+    input getEventInput{
+      _id:ID
+    }
     input eventInput{
       _id:ID
       tittle:String
@@ -70,12 +73,14 @@ const typeDefs = `#graphql
       _id:ID
     }
     input bookingInput{
-      _id:ID
+      eventId:ID
+      userId:ID
       by:[Booking]
     }
     type Query {
         hello: String
         eventDelete(deleteEvent:deleteEventInput):deleteEvent
+        getEvent:String
     }
     type Mutation{
       signUpUser(user:userInput):User
